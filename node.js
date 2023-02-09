@@ -1,5 +1,5 @@
 /**
-* A Node represents an HTML Element. A node can have a tag name,
+* Node represents an HTML Element. A node can have a tag name,
 * a list of CSS classes and a list of children nodes.
 */
 class Node {
@@ -9,7 +9,7 @@ class Node {
     this.tag = tag;
     // Array of CSS class names (string) on this element.
     this.classes = classes;
-    // Array of child nodes.
+    // Array of children nodes.
     this.children = children; // All children are of type Node
   }
   
@@ -39,20 +39,6 @@ class Node {
   *   </div>
   * </div>
   * Selector `.note` should return one span node with `note` class.
-  *
-  * 3.
-  * <div> 
-  *   <span id="span-1" class="note></span>
-  *   <span id="span-2"></span>
-  *   <span id="span-3"></span>
-  *   <article>
-  *     <div>
-  *       <span id="span-3"></span>
-  *     </div>
-  *   </article>
-  * </div>
-  * Selector `.note ~ span` should return two span nodes.
-  * span-1 -> span-2.
   * 
   * @param {string} the selector string.
   * @returns {Array} Array of descendent nodes.
